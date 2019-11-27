@@ -4,6 +4,7 @@ const app = express()
 const hbs = require('hbs')
 const webPage = path.join(__dirname, './webpage')
 const partialPath = path.join(__dirname, './partial')
+const port = process.env.PORT || 3000
 app.set('view engine', 'hbs')
 app.set('views', webPage)
 
@@ -17,6 +18,6 @@ app.get('', (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is up on port 3000")
 })
